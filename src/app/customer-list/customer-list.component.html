@@ -1,0 +1,26 @@
+<div class="container">
+  <table class="table table-sm">
+    <thead>
+      <th>Full Name</th>
+      <th>Email </th>
+      <th>Mobile</th>
+      <th>Location</th>
+
+    </thead>
+    <tr *ngFor="let customer of customerArray">
+      <td>{{customer.fullName}}</td>
+      <td>{{customer.email}}</td>
+      <td> {{customer.mobile}}</td>
+      <td>{{customer.location}}</td>
+      <td>
+        <button class="btn btn-outline-info"                                 (click)="customerService.populate(customer)">Edit</button>
+        <button class="btn btn-outline-danger" (click)="onDelete(customer.$key)">Delete</button>
+
+      </td>
+
+
+
+    </tr>
+
+  </table>
+</div>
